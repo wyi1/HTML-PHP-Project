@@ -13,18 +13,14 @@
   if ( isset($_POST['uname']) && isset($_POST['pw']) ) {
     if ( strlen($_POST['uname']) < 1 || strlen($_POST['pw']) < 1 ) {
       $msg = "User name and password are required";
-
-
     }else{
       header("Location: registeraction.php");
-
     }
-    if ( $msg !== false ) {
-      echo("<p style='color: red;'>".htmlentities($msg)." </p> \n");
-
-    }
-
   }
+    if ( $msg !== false ) {
+      echo('<p style="color: red;">'.htmlentities($msg)."</p>\n" );
+    }
+
       ?>
         <body>
         <form method = "POST">

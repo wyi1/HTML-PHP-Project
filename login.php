@@ -44,7 +44,7 @@ $pdo=new PDO('mysql:host=localhost;port=3306;dbname=project',
                     //echo $result2; //Testing to see if am getting the hashed password.
                     if($stored_hash == $pwdata){
 
-                      header("Location: quiz.php?name=".urlencode($uname));
+                      header("Location: home.php?name=".urlencode($uname));
                       return;
                     } else {
                       $msg = "Incorrect password";
