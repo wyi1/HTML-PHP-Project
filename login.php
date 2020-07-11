@@ -26,15 +26,23 @@ $pdo=new PDO('mysql:host=localhost;port=3306;dbname=project',
             $stored_hash = md5($_POST['pw']);
               if ( strlen($uname) < 1 || strlen($pw) < 1 ) {
                 $msg = "User name and password are required";
-                } else {
-                  $query1 = "SELECT count(*) FROM user WHERE username='$uname'";
-                  $result1 = $pdo->query($query1);
+                if ( $msg !== false ) {
+                  echo('<p style="color: red;">'.htmlentities($msg)."</p>\n");
 
+                }
+                } else {
+                  $query1 = "SELECT * FROM user WHERE username='$uname'";
+                  $result1 = $pdo->query($query1);
                   if($result1->rowCount() == 1){
                     $query2 = "SELECT password FROM user WHERE username='$uname'";
-                    $result2 = $pdo->prepare($query2);
+                    $result2 = $pdo->query($query2);
+
+                    while($row = $result2->fetch(PDO::FETCH_ASSOC))
+                    {
+                      $pwdata= $row["password"];
+                    }
                     //echo $result2; //Testing to see if am getting the hashed password.
-                    if(password_verify($stored_hash, $result2 )){
+                    if($stored_hash == $pwdata){
 
                       header("Location: quiz.php?name=".urlencode($uname));
                       return;
