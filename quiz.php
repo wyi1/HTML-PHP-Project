@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!--code by webdevtrick (webdevtrick.com) -->
 <head>
 	<meta charset=UTF-8 />
 	<title>SSE3150 Quiz</title>
