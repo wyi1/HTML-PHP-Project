@@ -1,7 +1,7 @@
 <?php
-$id = $_POST["id"];
-$quizresult = $_POST["quizresult"];
-$percentage = $_POST["percentage"];
+$id = $_REQUEST["id"];
+$quizresult = $_REQUEST["quizresult"];
+$percentage = $_REQUEST["percentage"];
 include 'db_connection.php';
 $conn = OpenCon();
 $pdo=new PDO('mysql:host=localhost;port=3306;dbname=project',

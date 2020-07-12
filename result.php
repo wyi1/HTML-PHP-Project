@@ -31,8 +31,22 @@
             if ($answer5 == "A") { $totalCorrect++; }
 
             echo "<div id='results'>$totalCorrect / 5 correct</div>";
+						$percent = ($totalCorrect*20);
 
-        ?>
+						if (isset($_POST['save'])){
+							$id = $_POST['id'];
+			  		header("Location: quizaction.php?id=".urlencode($id)."&quizresult=".urlencode($totalCorrect)."&percentage=".urlencode($percent));
+					}
+					if (isset($_POST['cancel'])){
+						$uname = $_POST['uname'];
+						header("Location: home.php?name=".urlencode($uname));
+						return;
+				}
+				?>
+				<form method = "POST">
+<input type="submit" value="Save Attempt" name="save"/>
+<input type="submit" value="Cancel" name="cancel"/>
+</form>
 
 	</div>
 

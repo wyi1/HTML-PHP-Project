@@ -7,8 +7,9 @@
 <body>
 	<div id="page-wrap">
 	<h1>Simple Quiz Built On PHP</h1>
-
-	<form action="result.php" method="post" id="quiz">
+	<form method="POST" action="result.php">
+		<input type="hidden" name="uname" value="<?php echo $_REQUEST['name'] ?>">
+<input type="hidden" name="id" value="<?php echo $_REQUEST['id'] ?>">
     <ol>
       <li>
         <h3>What is Dr. Koh's full name?</h3>
@@ -17,7 +18,7 @@
           <input type="radio" name="question-1-answers" id="question-1-answers-A" value="A" />
           <label for="question-1-answers-A">KOH SIEW HUA</label>
         </div>
-                        
+
         <div>
           <input type="radio" name="question-1-answers" id="question-1-answers-B" value="B" />
           <label for="question-1-answers-B">KOH TIENG WEI</label>
@@ -25,7 +26,7 @@
 
         <div>
           <input type="radio" name="question-1-answers" id="question-1-answers-C" value="C" />
-          <label for="question-1-answers-C">ALVIN KOH</label>
+          <label for="question-1-answers-C">KOH MEI LI</label>
         </div>
 
       </li>
@@ -40,7 +41,7 @@
 
       <div>
         <input type="radio" name="question-2-answers" id="question-2-answers-B" value="B" />
-        <label for="question-2-answers-B">Because he likes having holidays.</label>
+        <label for="question-2-answers-B">Because he likes to holiday.</label>
       </div>
 
       <div>
@@ -112,12 +113,10 @@
 
     </ol>
 
-    <input type="submit" value="Submit" class="submitbtn" />
-
+    <input type="submit" value="Submit" name="submit"/>
 		</form>
 
 	</div>
-
 
 </body>
 
