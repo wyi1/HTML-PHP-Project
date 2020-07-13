@@ -7,6 +7,11 @@
 </head>
 <body>
 	<h1>Welcome User!</h1>
+  <?php
+  if ( ! isset($_GET['name']) || strlen($_GET['name']) < 1 ) {
+          die("Please head to <a href='login.php'>Login</a>");
+         }
+          ?>
   <table>
     <tr>
     <th>ID</th>
@@ -19,6 +24,7 @@
   $conn = OpenCon();
   $pdo=new PDO('mysql:host=localhost;port=3306;dbname=project',
        'root', '1234');
+
   $uname = $_GET['name'];
   if ( isset($_REQUEST['name']) ) {
    echo "<p>Welcome: ";
@@ -41,9 +47,7 @@ while ( $row = $stmt->fetch(PDO::FETCH_ASSOC)) {
       echo "</tr>";
   }
 
-  if ( ! isset($_GET['name']) || strlen($_GET['name']) < 1 ) {
-   die('Name parameter missing');
-  }
+
   if ( isset($_POST['logout']) ) {
    header("Location: login.php");
    return;

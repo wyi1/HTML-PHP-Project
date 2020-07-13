@@ -15,7 +15,6 @@
 		<h1>Result of the Quiz</h1>
 
         <?php
-
             $answer1 = $_POST['question-1-answers'];
             $answer2 = $_POST['question-2-answers'];
             $answer3 = $_POST['question-3-answers'];
@@ -33,21 +32,18 @@
             echo "<div id='results'>$totalCorrect / 5 correct</div>";
 						$percent = ($totalCorrect*20);
 
-						if (isset($_POST['save'])){
-							$id = $_POST['id'];
-			  		header("Location: quizaction.php?id=".urlencode($id)."&quizresult=".urlencode($totalCorrect)."&percentage=".urlencode($percent));
-					}
-					if (isset($_POST['cancel'])){
-						$uname = $_POST['uname'];
-						header("Location: home.php?name=".urlencode($uname));
-						return;
-				}
 				?>
-				<form method = "POST">
-<input type="submit" value="Save Attempt" name="save"/>
-<input type="submit" value="Cancel" name="cancel"/>
-</form>
-
+				<form method = "POST" action = "quizaction.php">
+					<input type="hidden" name="uname" value="<?php echo $_POST['uname'] ?>">
+					<input type="hidden" name="id" value="<?php echo $_POST['id'] ?>">
+					<input type="hidden" name="quizresult" value="<?php echo $totalCorrect ?>">
+					<input type="hidden" name="percentage" value="<?php echo $percent ?>">
+					<input type="submit" value="Save Attempt" name="save"/>
+				</form>
+				<form method="GET" action="home.php">
+					<input type="hidden" name="name" value="<?php echo $_POST['uname'] ?>">
+					<input type="submit" value="Cancel" name="cancel"/>
+				</form>
 	</div>
 
 </body>

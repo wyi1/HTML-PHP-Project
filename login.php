@@ -30,7 +30,7 @@ $pdo=new PDO('mysql:host=localhost;port=3306;dbname=project',
                   echo('<p style="color: red;">'.htmlentities($msg)."</p>\n");
 
                 }
-                } else {
+              } else {
                   $query1 = "SELECT * FROM user WHERE username='$uname'";
                   $result1 = $pdo->query($query1);
                   if($result1->rowCount() == 1){
@@ -56,9 +56,9 @@ $pdo=new PDO('mysql:host=localhost;port=3306;dbname=project',
                 }else if ($result1->rowCount() == 0) {
                   echo "User does not exist, please redirect to register" ?> <a href="register.php">Sign Up</a> <?php ;
                 }
-}
+              }
 
-      }
+            }
         if ( isset($_POST['register']) ) {
          header('Location: register.php');
          return;

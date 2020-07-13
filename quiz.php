@@ -9,7 +9,7 @@
 	<h1>Simple Quiz Built On PHP</h1>
 	<form method="POST" action="result.php">
 		<input type="hidden" name="uname" value="<?php echo $_REQUEST['name'] ?>">
-<input type="hidden" name="id" value="<?php echo $_REQUEST['id'] ?>">
+		<input type="hidden" name="id" value="<?php echo $_REQUEST['id'] ?>">
     <ol>
       <li>
         <h3>What is Dr. Koh's full name?</h3>
@@ -52,21 +52,21 @@
       </li>
 
       <li>
-        <h3>When is the normal class time?</h3>
+        <h3>Is Dr Koh handsome?</h3>
 
         <div>
           <input type="radio" name="question-3-answers" id="question-3-answers-A" value="A" />
-          <label for="question-1-answers-A">Monday 12pm to 2 pm</label>
+          <label for="question-1-answers-A">Yes</label>
         </div>
 
         <div>
           <input type="radio" name="question-3-answers" id="question-3-answers-B" value="B" />
-          <label for="question-3-answers-B">Friday 8pm to 10pm</label>
+          <label for="question-3-answers-B">No</label>
         </div>
 
         <div>
           <input type="radio" name="question-3-answers" id="question-3-answers-C" value="C" />
-          <label for="question-3-answers-C">Wednesday 5pm to 7pm</label>
+          <label for="question-3-answers-C">Maybe</label>
         </div>
 
       </li>
