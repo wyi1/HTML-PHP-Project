@@ -60,3 +60,7 @@
 .form{
     margin-right:10px;
 }
+
+.btn:hover {
+    opacity: 0.8;
+  }

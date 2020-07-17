@@ -50,11 +50,10 @@
           echo ('<p style="color: red;">' . htmlentities($msg) . "</p>\n");
         }
       } else if ($result1->rowCount() == 0) {
-        echo "User does not exist, please redirect to register" ?> <a href="register.php">Sign Up</a>
-  <?php
+        echo "User does not exist, please redirect to register <a href=\"register.php\">Sign Up</a>";
       }
     }
-  }
+  } 
   if (isset($_POST['register'])) {
     header('Location: register.php');
     return;
@@ -63,9 +62,10 @@
 
   ?>
   <form method="post">
-    <p>User Name <input type="text" name="uname" /></p>
-    <p>Password <input type="password" name="pw" /></p>
-    <button type="submit" class="btn button1">Log In</button>
+    <span style="color:red; font-weight:bold;"></span>
+    <p>User Name <input type="text" name="uname" id="uname" /></p>
+    <p>Password <input type="password" name="pw" id="pw" /></p>
+    <button type="submit" class="btn button1" id="login">Log In</button>
     <button type="submit" name="register" class="btn button3">Sign Up</button>
   </form>
 </body>
