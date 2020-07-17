@@ -7,9 +7,8 @@ $pw = md5($_SESSION['pw']);
 include 'db_connection.php';
 include 'register.php';
 $conn = OpenCon();
-$pdo=new PDO('mysql:host=localhost;port=3306;dbname=project',
-     'root', '1234');
-$stmt = $pdo->prepare("INSERT INTO user (username,password)
+// $conn=new PDO('mysql:host=localhost;port=3306;dbname=project','root', '1234');
+$stmt = $conn->prepare("INSERT INTO user (username,password)
 VALUES (:username, :password)");
     $stmt->bindParam(':username', $uname);
     $stmt->bindParam(':password', $pw);

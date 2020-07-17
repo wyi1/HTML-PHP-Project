@@ -4,6 +4,7 @@
 <html>
 <head>
 
+<link rel='stylesheet' type='text/css' href='style.css'>
 
 </head>
 
@@ -33,7 +34,7 @@
           <h1>Registration</h1>
           <p><label for "uname">Username: <input name="uname" type="text"  /></label></p>
           <p><label for "pw">Password: <input name="pw" type="password"  /></label></p>
-            <input type="submit" value="Submit" />
+            <input type="submit" value="Submit" class="btn button1" />
           </form>
         </body>
 
