@@ -32,16 +32,16 @@
       $query1 = "SELECT * FROM user WHERE username='$uname'";
       $result1 = $conn->query($query1);
       if ($result1->rowCount() == 1) {
-        $query2 = "SELECT password FROM user WHERE username='$uname'";
+        $query2 = "SELECT username,password FROM user WHERE username='$uname'";
         $result2 = $conn->query($query2);
-
+        session_start();
         while ($row = $result2->fetch(PDO::FETCH_ASSOC)) {
+          $_SESSION["uname"] = $row['username'];
           $pwdata = $row["password"];
         }
         //echo $result2; //Testing to see if am getting the hashed password.
         if ($stored_hash == $pwdata) {
-
-          header("Location: home.php?name=" . urlencode($uname));
+          header("Location: home.php");
           return;
         } else {
           $msg = "Incorrect password";
@@ -53,7 +53,7 @@
         echo "User does not exist, please redirect to register <a href=\"register.php\">Sign Up</a>";
       }
     }
-  } 
+  }
   if (isset($_POST['register'])) {
     header('Location: register.php');
     return;

@@ -8,7 +8,7 @@
   <link rel='stylesheet' type='text/css' href='style.css'>
   <script>
     function goBack() {
-      window.location.href = "http://localhost:8080/SSE3150-Project/login.php";
+      window.location.href = "login.php";
     }
   </script>
 </head>

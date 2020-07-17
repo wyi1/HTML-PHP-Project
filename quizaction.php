@@ -16,34 +16,34 @@ $stmt->bindParam(':percentage', $percentage);
 $stmt->execute();
 
 echo "Succesfully registered. ";
-// Please head to <a href='home.php?name=$uname'>Home</a> or <a href='login.php'>Logout</a> 
+// Please head to <a href='home.php?name=$uname'>Home</a> or <a href='login.php'>Logout</a>
 ?>
 <?php
 function custom_scripts()
 {
-     
+
 }
 ?>
 
 <html>
    <head>
       <title>Save Result</title>
-      <script type = "text/javascript" 
+      <script type = "text/javascript"
          src = "https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js">
       </script>
-		
+
       <script type = "text/javascript" language = "javascript">
         $(document).ready(function(){
           setTimeout(function() {
-           window.location.href = "http://localhost:8080/SSE3150-Project/home.php?name=<?php echo $uname ?>"
+           window.location.href = "home.php?name=<?php echo $uname ?>"
           }, 3000);
         });
       </script>
    </head>
-	
+
    <body>
       <p>Redirecting to Home in 3 seconds. </p>
       <p>Click <a href='home.php?name=$uname'>here</a> if you are not redirected. </p>
-		
+
    </body>
 </html>

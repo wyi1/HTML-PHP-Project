@@ -10,7 +10,8 @@
 <body>
   <!-- <h1>Welcome User!</h1> -->
   <?php
-  if (!isset($_GET['name']) || strlen($_GET['name']) < 1) {
+  session_start();
+  if (!isset($_SESSION['uname']) || strlen($_SESSION['uname']) < 1) {
     die("Please head to <a href='login.php'>Login</a>");
   }
   ?>
@@ -27,10 +28,10 @@
     $conn = OpenCon();
     // $pdo=new PDO('mysql:host=localhost;port=3306;dbname=project','root', '1234');
 
-    $uname = $_GET['name'];
-    if (isset($_REQUEST['name'])) {
+    $uname = $_SESSION['uname'];
+    if ($_SESSION['uname']) {
       echo "<h1>Welcome, ";
-      echo htmlentities($_REQUEST['name']);
+      echo htmlentities($_SESSION['uname']);
       echo "!</h1>\n";
     }
 
@@ -59,6 +60,7 @@
     }
 
     if (isset($_POST['logout'])) {
+      unset($SESSION['uname']);
       header("Location: login.php");
       return;
     }
