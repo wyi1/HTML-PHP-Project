@@ -9,6 +9,12 @@
 	<link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 
+<style>
+body{
+	background-color: #F0FFF0;
+	color: #8B008B;
+}
+</style>
 <body>
 
 	<div id="page-wrap">
@@ -50,7 +56,7 @@
 				<input type="hidden" name="id" value="<?php echo $_POST['id'] ?>">
 				<input type="hidden" name="quizresult" value="<?php echo $totalCorrect ?>">
 				<input type="hidden" name="percentage" value="<?php echo $percent ?>">
-				<input class="btn button1" type="submit" value="Save Attempt" name="save" />
+				<input class="btn button3" type="submit" value="Save Attempt" name="save" />
 			</form>
 			<form class="form" method="GET" action="home.php">
 				<input type="hidden" name="name" value="<?php echo $_POST['uname'] ?>">

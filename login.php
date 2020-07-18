@@ -4,11 +4,32 @@
 <html>
 
 <head>
-  <link rel='stylesheet' type='text/css' href='style.css'>
+  <link rel='stylesheet' type='text/css' href='login.css'>
 </head>
 
 <meta charset=utf-8 />
 <title>Login</title>
+
+<style>
+h1{
+  color: #DA70D6;
+}
+body{
+  text-align: center;
+}
+
+.button {
+    margin-top: 10px;
+    background-color: #e46569;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+</style>
 
 <body>
   <h1>Login to Play</h1>
@@ -61,13 +82,17 @@
 
 
   ?>
+  <div class="container" onclick="onclick">
+    <div class="top"></div>
+    <div class="bottom"></div>
+    <div class="center">
   <form method="post">
     <span style="color:red; font-weight:bold;"></span>
     <p>User Name <input type="text" name="uname" id="uname" /></p>
     <p>Password <input type="password" name="pw" id="pw" /></p>
-    <button type="submit" class="btn button1" id="login">Log In</button>
-    <button type="submit" name="register" class="btn button3">Sign Up</button>
+    <button type="submit" class="button" id="login">Log In</button>
+    <button type="submit" class="button" name="register">Sign Up</button>
   </form>
+</div>
 </body>
-
 </html>

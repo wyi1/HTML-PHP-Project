@@ -7,6 +7,19 @@
   <link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 
+<style>
+
+h1{
+  font-family: monospace;
+  color: #F08080;
+}
+body{
+  text-align: center;
+  background-color: #FFF0F5;
+  font-family: sans-serif;
+}
+</style>
+
 <body>
   <!-- <h1>Welcome User!</h1> -->
   <?php
@@ -30,7 +43,7 @@
 
     $uname = $_SESSION['uname'];
     if ($_SESSION['uname']) {
-      echo "<h1>Welcome, ";
+      echo "<h1>WELCOME, ";
       echo htmlentities($_SESSION['uname']);
       echo "!</h1>\n";
     }

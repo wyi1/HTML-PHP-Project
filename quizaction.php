@@ -41,6 +41,14 @@ function custom_scripts()
       </script>
    </head>
 
+   <style>
+   body{
+     background-color: #F0FFF0;
+   	 color: #8B008B;
+     text-align: center;
+     font-family: serif;
+   }
+   </style>
    <body>
       <p>Redirecting to Home in 3 seconds. </p>
       <p>Click <a href='home.php?name=$uname'>here</a> if you are not redirected. </p>

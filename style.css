@@ -5,23 +5,23 @@
 
 #data td,
 #data th {
-    border: 1px solid #ddd;
+    border: 1px solid #E9967A;
     padding: 8px;
 }
 
 #data tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background-color: #FFB6C1;
 }
 
 #data tr:hover {
-    background-color: #ddd;
+    background-color: #FFE4E1;
 }
 
 #data th {
     padding-top: 12px;
     padding-bottom: 12px;
-    text-align: left;
-    background-color: #008CBA;
+    text-align: center;
+    background-color: #FF7F50;
     color: white;
 }
 
@@ -40,7 +40,7 @@
 
 /* Green */
 .button1 {
-    background-color: #4CAF50;
+    background-color: #8FBC8F;
 }
 
 /* Red */
@@ -50,11 +50,20 @@
 
 /* Blue */
 .button3 {
-    background-color: #008CBA;
+    background-color: #48D1CC;
+}
+
+.button4 {
+    background-color: #F4A460;
+}
+
+.button5 {
+    background-color: #66CDAA;
 }
 
 .button {
     display: flex;
+    text-align: center;
 }
 
 .form{

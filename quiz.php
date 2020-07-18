@@ -6,6 +6,27 @@
   <link rel='stylesheet' type='text/css' href='style.css'>
 </head>
 
+<style>
+h1{
+  font-family: monospace;
+  color: #00BFFF;
+}
+
+h3{
+  font-family: serif;
+  color: #2E8B57;
+}
+
+li{
+  font-family: serif;
+  color: #008080;
+}
+
+body{
+  background-color: #FFFFE0;
+}
+</style>
+
 <body>
   <div id="page-wrap">
     <h1>Simple Quiz Built On PHP</h1>
@@ -115,21 +136,18 @@
 
       </ol>
 
-      <input class="btn button1" type="submit" value="Submit" name="submit" />
+      <input class="btn button5" type="submit" value="Submit" name="submit" />
     </form>
     <span></span>
   </div>
-
-
 </body>
-
 </html>
 
 <!-- <!DOCTYPE html>
 <html>
 
 <head>
-  
+
   <script>
     alert('LOL');
     $(document).ready(function() {
