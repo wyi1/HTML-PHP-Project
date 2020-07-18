@@ -30,7 +30,7 @@ body{
 <body>
   <div id="page-wrap">
     <h1>Simple Quiz Built On PHP</h1>
-    <form id="myForm" method="POST" action="result.php">
+    <form id="myForm" method="POST" action="quizaction1.php">
       <input type="hidden" name="uname" value="<?php echo $_REQUEST['name'] ?>">
       <input type="hidden" name="id" value="<?php echo $_REQUEST['id'] ?>">
       <ol>

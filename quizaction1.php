@@ -51,7 +51,7 @@ body{
 
 		?>
 		<div class="button">
-			<form class="form" method="POST" action="quizaction.php">
+			<form class="form" method="POST" action="quizaction2.php">
 				<input type="hidden" name="uname" value="<?php echo $_POST['uname'] ?>">
 				<input type="hidden" name="id" value="<?php echo $_POST['id'] ?>">
 				<input type="hidden" name="quizresult" value="<?php echo $totalCorrect ?>">
